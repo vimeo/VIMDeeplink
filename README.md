@@ -12,11 +12,9 @@ let success = VimeoAppClient.isVimeoAppInstalled()
 
 let success = VimeoAppClient.openVimeoApp()
 
-let videoURI = "..." // Obtained via the Vimeo API
-let success = VimeoAppClient.showVideo(videoURI: videoURI)
+let success = VimeoAppClient.showVideo(videoURI: videoURI) // URI obtained via the Vimeo API
 
-let userURI = "..." // Obtained via the Vimeo API
-let success = VimeoAppClient.showUser(userURI: userURI)
+let success = VimeoAppClient.showUser(userURI: "...") // URI obtained via the Vimeo API
 ```
 
 In Objc:
@@ -28,9 +26,7 @@ BOOL success = [VimeoAppClient isVimeoAppInstalled];
 
 BOOL success = [VimeoAppClient openVimeoApp];
 
-NSString *videoURI = @"..."; // Obtained via the Vimeo API
-BOOL success = [VimeoAppClient showVideoWithURI:videoURI];
+BOOL success = [VimeoAppClient showVideoWithURI:@"..."]; // URI obtained via the Vimeo API
 
-NSString *userURI = @"..."; // Obtained via the Vimeo API
-BOOL success = [VimeoAppClient showUserWithURI:userURI];
+BOOL success = [VimeoAppClient showUserWithURI:@"..."]; // URI obtained via the Vimeo API
 ```
