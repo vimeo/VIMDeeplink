@@ -1,7 +1,7 @@
 VimeoAppClient-iOS
 ==================
 
-Simple Objc and Swift wrappers around the Vimeo iOS deeplink API
+Simple Swift and Objc wrappers around the Vimeo iOS deeplink API via the UIApplication [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:) method.
 
 In Swift:
 
