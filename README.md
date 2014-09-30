@@ -12,7 +12,7 @@ let success = VimeoAppClient.isVimeoAppInstalled()
 
 let success = VimeoAppClient.openVimeoApp()
 
-let success = VimeoAppClient.showVideo(videoURI: videoURI) // URI obtained via the Vimeo API
+let success = VimeoAppClient.showVideo(videoURI: "...") // URI obtained via the Vimeo API
 
 let success = VimeoAppClient.showUser(userURI: "...") // URI obtained via the Vimeo API
 ```
