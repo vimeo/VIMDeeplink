@@ -12,7 +12,7 @@ A helper library to view a user or video with the official Vimeo iOS library. Su
   - [Open app in the App store](#open-app-in-the-app-store)
   - [Check if the Vimeo app is installed](#check-if-the-vimeo-app-is-installed)
   - [Open the Vimeo app](#open-the-vimeo-app)
-  - [Open a video in the Vimeo app](#open-a-video-in-the-vimeo-app)
+  - [View a video in the Vimeo app](#view-a-video-in-the-vimeo-app)
   - [View a user in the Vimeo app](#view-a-user-in-the-vimeo-app)
 
 # Installation
@@ -31,7 +31,7 @@ If you wish to use this library, you must make sure your user has the Vimeo app 
 
 If the user has the app installed, you can open the video. First you must find your video's URI. This is the unique identifier provided by the Vimeo API. You can learn more at the [developer site](https://developer.vimeo.com/api). We will release an iOS API library in the future, but for the moment I recommend starting with an OAuth 2 library and working from there.
 
-Once you have your video's URI, you can pass it into the [proper method](#open-a-video-in-the-vimeo-app) and the Vimeo app will open to your video.
+Once you have your video's URI, you can pass it into the [proper method](#view-a-video-in-the-vimeo-app) and the Vimeo app will open to your video.
 
 # View a user
 
@@ -72,7 +72,7 @@ Once you have your user's URI, you can pass it into the [proper method](#view-a-
 #### Objective C
 `BOOL success = [VimeoAppClient openVimeoApp];`
 
-## Open a video in the Vimeo app
+## View a video in the Vimeo app
 
 This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:) method. You must provide a video uri to this method. You can find a video's uri by making an API call to our [video endpoints](https://developer.vimeo.com/api/endpoints/videos#/{video_id}).
 
