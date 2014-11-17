@@ -1,6 +1,6 @@
 Open With Vimeo
 ==================
-A helper library to view a user or video with the official Vimeo iOS App. Supports both [Swift](https://developer.apple.com/swift/) and [Objective C](https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html).
+A helper class to view a user profile or video with the official Vimeo iOS App. Supports both [Swift](https://developer.apple.com/swift/) and [Objective C](https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html).
 
 
 # Contents
