@@ -23,7 +23,7 @@ A helper class to view a user profile or video with the official Vimeo iOS App. 
 
 If you want to play a Vimeo video on iOS, there are currently three choices.
 
-1. You can open the video in the Vimeo application using this library or by opening vimeo://{user-uri} or vimeo://{video-uri} links with [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:).
+1. You can open the video in the Vimeo application using this library or by opening vimeo://{user_uri} or vimeo://{video_uri} links with [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:).
 2. You can embed the video in a web view. See our [embed documentation](https://developer.vimeo.com/apis/oembed) for more.
 3. PRO members can generate direct video file links for their own players. See our [API documentation](https://developer.vimeo.com/api) for more.
 
