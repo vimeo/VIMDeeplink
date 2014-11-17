@@ -16,7 +16,7 @@ A helper library to view a user or video with the official Vimeo iOS App. Suppor
   - [View a user profile in the Vimeo app](#view-a-user-in-the-vimeo-app)
 
 # Installation
-1. [Download this repo](https://github.com/vimeo/VimeoAppClient-iOS/archive/master.zip).
+1. [Download this repo](https://github.com/vimeo/VIMDeeplink/archive/master.zip).
 2. Drop either the objc .h/.m files or the .swift file into your project.
 
 # Play a video
@@ -50,45 +50,45 @@ Once you have your user's URI, you can pass it into the [proper method](#view-a-
 ## Open app in the App store
 
 #### Swift
-`let success = VimeoAppClient.viewVimeoAppInAppStore()`
+`let success = VIMDeeplink.viewVimeoAppInAppStore()`
 
 #### Objective C
-`BOOL success = [VimeoAppClient viewVimeoAppInAppStore];`
+`BOOL success = [VIMDeeplink viewVimeoAppInAppStore];`
 
 
 ## Check if the Vimeo app is installed
 
 #### Swift
-`let success = VimeoAppClient.isVimeoAppInstalled()`
+`let success = VIMDeeplink.isVimeoAppInstalled()`
 
 #### Objective C
-`BOOL success = [VimeoAppClient isVimeoAppInstalled];`
+`BOOL success = [VIMDeeplink isVimeoAppInstalled];`
 
 ## Open the Vimeo app
 
 #### Swift
-`let success = VimeoAppClient.openVimeoApp()`
+`let success = VIMDeeplink.openVimeoApp()`
 
 #### Objective C
-`BOOL success = [VimeoAppClient openVimeoApp];`
+`BOOL success = [VIMDeeplink openVimeoApp];`
 
 ## View a video in the Vimeo app
 
 This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:) method. You must provide a video uri to this method. You can find a video's uri by making an API call to our [video endpoints](https://developer.vimeo.com/api/endpoints/videos#/{video_id}).
 
 #### Swift
-`let success = VimeoAppClient.showVideo(videoURI: "...")`
+`let success = VIMDeeplink.showVideo(videoURI: "...")`
 
 #### Objective C
-`BOOL success = [VimeoAppClient showVideoWithURI:@"..."]; // URI obtained via the Vimeo API`
+`BOOL success = [VIMDeeplink showVideoWithURI:@"..."]; // URI obtained via the Vimeo API`
 
 ## View a user in the Vimeo app
 
 This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:) method. You must provide a user uri to this method. You can find a user's uri by making an API call to our [user endpoints](https://developer.vimeo.com/api/endpoints/users#/{user_id}).
 
 #### Swift
-`let success = VimeoAppClient.showUser(userURI: "...")`
+`let success = VIMDeeplink.showUser(userURI: "...")`
 
 #### Objective C
-`BOOL success = [VimeoAppClient showUserWithURI:@"..."];`
+`BOOL success = [VIMDeeplink showUserWithURI:@"..."];`
 
