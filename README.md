@@ -1,6 +1,6 @@
 Open With Vimeo
 ==================
-A helper library to view a user or video with the official Vimeo iOS library. Supports both [Swift](https://developer.apple.com/swift/) and [Objective C](https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html).
+A helper library to view a user or video with the official Vimeo iOS App. Supports both [Swift](https://developer.apple.com/swift/) and [Objective C](https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html).
 
 
 # Contents
@@ -9,21 +9,21 @@ A helper library to view a user or video with the official Vimeo iOS library. Su
  - [View a user](#view-a-user)
  - [Restrictions](#restrictions)
  - [Reference](#reference)
-  - [Open app in the App store](#open-app-in-the-app-store)
+  - [View app in the App store](#open-app-in-the-app-store)
   - [Check if the Vimeo app is installed](#check-if-the-vimeo-app-is-installed)
   - [Open the Vimeo app](#open-the-vimeo-app)
   - [View a video in the Vimeo app](#view-a-video-in-the-vimeo-app)
-  - [View a user in the Vimeo app](#view-a-user-in-the-vimeo-app)
+  - [View a user profile in the Vimeo app](#view-a-user-in-the-vimeo-app)
 
 # Installation
-1. [Download this library](https://github.com/vimeo/VimeoAppClient-iOS/archive/master.zip).
-2. todo: how to tie into your project
+1. [Download this repo](https://github.com/vimeo/VimeoAppClient-iOS/archive/master.zip).
+2. Drop either the objc .h/.m files or the .swift file into your project.
 
 # Play a video
 
 If you want to play a Vimeo video on iOS, there are currently three choices.
 
-1. You can open the video in the Vimeo application using this library or by opening vimeo://users/{id} or vimeo://videos/{id} links with [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:).
+1. You can open the video in the Vimeo application using this library or by opening vimeo://{user-uri} or vimeo://{video-uri} links with [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:).
 2. You can embed the video in a web view. See our [embed documentation](https://developer.vimeo.com/apis/oembed) for more.
 3. PRO members can generate direct video file links for their own players. See our [API documentation](https://developer.vimeo.com/api) for more.
 
