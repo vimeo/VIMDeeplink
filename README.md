@@ -47,6 +47,10 @@ Once you have your user's URI, you can pass it into the [proper method](#view-a-
 
 # Reference
 
+The Vimeo deeplink base URL is: `vimeo://app.vimeo.com`
+
+Currently supported paths are `vimeo://app.vimeo.com/videos/12345` where `/videos/12345` is a video URI and `vimeo://app.vimeo.com/users/12345` where `/users/12345` is a user URI.
+
 ## Open app in the App store
 
 #### Swift
