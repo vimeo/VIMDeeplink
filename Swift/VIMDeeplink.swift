@@ -12,10 +12,15 @@ import UIKit
 private let BaseURLString = "vimeo://app.vimeo.com"
 private let AppStoreURLString = "itms-apps://itunes.apple.com/us/app/425194759"
 
+private let uploadLink = "/upload"
+private let profileLink = "/me"
+
 private enum VimeoApp
 {
     case Video(String)
     case User(String)
+    case Upload
+    case Me
 }
 
 private protocol URL
@@ -31,6 +36,8 @@ extension VimeoApp : URL
         {
             case .Video(let videoURI): return NSURL(string: BaseURLString + videoURI)!
             case .User(let userURI): return NSURL(string: BaseURLString + userURI)!
+            case .Upload: return NSURL(string: BaseURLString + uploadLink)!
+            case .Me: return NSURL(string: BaseURLString + profileLink)!
         }
     }
 }
@@ -92,5 +99,30 @@ public class VimeoAppClient
         
         return false
     }
+    
+    public class func showUpload() -> Bool
+    {
+        if (isVimeoAppInstalled())
+        {
+            let endpoint = VimeoApp.Upload
+            let URL = endpoint.URL
+            
+            return UIApplication.sharedApplication().openURL(URL)
+        }
+        
+        return false
+    }
 
+    public class func showMyProfile() -> Bool
+    {
+        if (isVimeoAppInstalled())
+        {
+            let endpoint = VimeoApp.Me
+            let URL = endpoint.URL
+            
+            return UIApplication.sharedApplication().openURL(URL)
+        }
+        
+        return false
+    }
 }

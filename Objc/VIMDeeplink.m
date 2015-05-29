@@ -13,6 +13,9 @@
 static NSString *BaseURLString = @"vimeo://app.vimeo.com";
 static NSString *AppStoreURLString = @"itms-apps://itunes.apple.com/us/app/425194759";
 
+static NSString *UploadLink = @"/upload";
+static NSString *ProfileLink = @"/me";
+
 @implementation VIMDeeplink
 
 + (BOOL)viewVimeoAppInAppStore
@@ -54,6 +57,32 @@ static NSString *AppStoreURLString = @"itms-apps://itunes.apple.com/us/app/42519
     if (userURI && [VIMDeeplink isVimeoAppInstalled])
     {
         NSString *URLString = [BaseURLString stringByAppendingString:userURI];
+        NSURL *URL = [NSURL URLWithString:URLString];
+        
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+    
+    return NO;
+}
+
++ (BOOL)showUpload
+{
+    if ([VIMDeeplink isVimeoAppInstalled])
+    {
+        NSString *URLString = [BaseURLString stringByAppendingString:UploadLink];
+        NSURL *URL = [NSURL URLWithString:URLString];
+        
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+    
+    return NO;
+}
+
++ (BOOL)showMyProfile
+{
+    if ([VIMDeeplink isVimeoAppInstalled])
+    {
+        NSString *URLString = [BaseURLString stringByAppendingString:ProfileLink];
         NSURL *URL = [NSURL URLWithString:URLString];
         
         return [[UIApplication sharedApplication] openURL:URL];

@@ -20,4 +20,8 @@
 
 + (BOOL)showUserWithURI:(NSString *)userURI;
 
++ (BOOL)showUpload;
+
++ (BOOL)showMyProfile;
+
 @end
