@@ -96,7 +96,9 @@ This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/d
 #### Objective C
 `BOOL success = [VIMDeeplink showUserWithURI:@"..."];`
 
-## Open the upload camera roll view in the Vimeo app
+## Open the Camera roll
+
+This will be supported in an as yet unreleased version of Vimeo iOS.
 
 #### Swift
 `let success = VIMDeeplink.showUpload()`
@@ -104,7 +106,9 @@ This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/d
 #### Objective C
 `BOOL success = [VIMDeeplink showUpload];`
 
-## Open the current user's profile in the Vimeo app
+## Open the current user's profile
+
+This will be supported in an as yet unreleased version of Vimeo iOS.
 
 #### Swift
 `let success = VIMDeeplink.showMyProfile()`
