@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 private let BaseURLString = "vimeo://app.vimeo.com"
-private let AppStoreURLString = "itms-apps://itunes.apple.com/us/app/425194759"
+private let AppStoreURLString = "itms-apps://itunes.apple.com/us/app/id425194759"
 
 private let uploadLink = "/upload"
 private let profileLink = "/me"
