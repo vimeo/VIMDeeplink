@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 
 static NSString *BaseURLString = @"vimeo://app.vimeo.com";
-static NSString *AppStoreURLString = @"itms-apps://itunes.apple.com/us/app/425194759";
+static NSString *AppStoreURLString = @"itms-apps://itunes.apple.com/us/app/id425194759";
 
 static NSString *UploadLink = @"/upload";
 static NSString *ProfileLink = @"/me";
