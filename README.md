@@ -14,6 +14,8 @@ A helper class to view a user profile or video with the official Vimeo iOS App. 
   - [Open the Vimeo app](#open-the-vimeo-app)
   - [View a video in the Vimeo app](#view-a-video-in-the-vimeo-app)
   - [View a user profile in the Vimeo app](#view-a-user-in-the-vimeo-app)
+  - [Open the Camera Roll](#open-the-camera-roll)
+  - [Open the current user's profile](#open-the-current-users-profile)
 
 # Installation
 1. [Download this repo](https://github.com/vimeo/VIMDeeplink/archive/master.zip).
