@@ -59,7 +59,7 @@ extension VimeoApp : URL
     }
 }
 
-public class VimeoAppClient
+public class VIMDeeplink
 {
     public class func viewVimeoAppInAppStore() -> Bool
     {
