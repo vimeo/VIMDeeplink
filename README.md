@@ -16,6 +16,10 @@ A helper class to view a user profile or video with the official Vimeo iOS App. 
   - [View a user profile in the Vimeo app](#view-a-user-in-the-vimeo-app)
   - [View a category in the Vimeo app](#view-a-category-in-the-vimeo-app)
   - [View a channel in the Vimeo app](#view-a-channel-in-the-vimeo-app)
+  - [Open the all categories page](#open-the-all-categories-page)
+  - [Open the Explore tab](#open-the-explore-tab)
+  - [Open the Feed tab](#open-the-feed-tab)
+  - [Open the Playlists tab](#open-the-playlists-tab)
   - [Open the Camera Roll](#open-the-camera-roll)
   - [Open the current user's profile](#open-the-current-users-profile)
 
