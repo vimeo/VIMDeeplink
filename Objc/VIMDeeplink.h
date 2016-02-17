@@ -20,6 +20,18 @@
 
 + (BOOL)showUserWithURI:(NSString *)userURI;
 
++ (BOOL)showCategoryWithURI:(NSString *)categoryURI;
+
++ (BOOL)showChannelWithURI:(NSString *)channelURI;
+
++ (BOOL)showAllCategories;
+
++ (BOOL)showExplore;
+
++ (BOOL)showFeed;
+
++ (BOOL)showPlaylists;
+
 + (BOOL)showUpload;
 
 + (BOOL)showMyProfile;
