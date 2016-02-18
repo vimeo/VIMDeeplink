@@ -15,6 +15,10 @@ static NSString *AppStoreURLString = @"itms-apps://itunes.apple.com/us/app/id425
 
 static NSString *UploadLink = @"/upload";
 static NSString *ProfileLink = @"/me";
+static NSString *CategoryLink = @"/categories";
+static NSString *ExploreLink = @"/explore";
+static NSString *FeedLink = @"/feed";
+static NSString *PlaylistsLink = @"/playlists";
 
 @implementation VIMDeeplink
 
@@ -57,6 +61,84 @@ static NSString *ProfileLink = @"/me";
     if (userURI && [VIMDeeplink isVimeoAppInstalled])
     {
         NSString *URLString = [BaseURLString stringByAppendingString:userURI];
+        NSURL *URL = [NSURL URLWithString:URLString];
+        
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+    
+    return NO;
+}
+
++ (BOOL)showCategoryWithURI:(NSString *)categoryURI
+{
+    if (userURI && [VIMDeeplink isVimeoAppInstalled])
+    {
+        NSString *URLString = [BaseURLString stringByAppendingString:categoryURI];
+        NSURL *URL = [NSURL URLWithString:URLString];
+        
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+    
+    return NO;
+}
+
++ (BOOL)showChannelWithURI:(NSString *)channelURI
+{
+    if (userURI && [VIMDeeplink isVimeoAppInstalled])
+    {
+        NSString *URLString = [BaseURLString stringByAppendingString:channelURI];
+        NSURL *URL = [NSURL URLWithString:URLString];
+        
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+    
+    return NO;
+}
+
++ (BOOL)showAllCategories
+{
+    if (userURI && [VIMDeeplink isVimeoAppInstalled])
+    {
+        NSString *URLString = [BaseURLString stringByAppendingString:CategoryLink];
+        NSURL *URL = [NSURL URLWithString:URLString];
+        
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+    
+    return NO;
+}
+
++ (BOOL)showExplore
+{
+    if (userURI && [VIMDeeplink isVimeoAppInstalled])
+    {
+        NSString *URLString = [BaseURLString stringByAppendingString:ExploreLink];
+        NSURL *URL = [NSURL URLWithString:URLString];
+        
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+    
+    return NO;
+}
+
++ (BOOL)showFeed
+{
+    if (userURI && [VIMDeeplink isVimeoAppInstalled])
+    {
+        NSString *URLString = [BaseURLString stringByAppendingString:FeedLink];
+        NSURL *URL = [NSURL URLWithString:URLString];
+        
+        return [[UIApplication sharedApplication] openURL:URL];
+    }
+    
+    return NO;
+}
+
++ (BOOL)showPlaylists
+{
+    if (userURI && [VIMDeeplink isVimeoAppInstalled])
+    {
+        NSString *URLString = [BaseURLString stringByAppendingString:PlaylistsLink];
         NSURL *URL = [NSURL URLWithString:URLString];
         
         return [[UIApplication sharedApplication] openURL:URL];

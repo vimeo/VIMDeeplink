@@ -14,6 +14,12 @@ A helper class to view a user profile or video with the official Vimeo iOS App. 
   - [Open the Vimeo app](#open-the-vimeo-app)
   - [View a video in the Vimeo app](#view-a-video-in-the-vimeo-app)
   - [View a user profile in the Vimeo app](#view-a-user-in-the-vimeo-app)
+  - [View a category in the Vimeo app](#view-a-category-in-the-vimeo-app)
+  - [View a channel in the Vimeo app](#view-a-channel-in-the-vimeo-app)
+  - [Open the all categories page](#open-the-all-categories-page)
+  - [Open the Explore tab](#open-the-explore-tab)
+  - [Open the Feed tab](#open-the-feed-tab)
+  - [Open the Playlists tab](#open-the-playlists-tab)
   - [Open the Camera Roll](#open-the-camera-roll)
   - [Open the current user's profile](#open-the-current-users-profile)
 
@@ -80,7 +86,7 @@ Currently supported paths are `vimeo://app.vimeo.com/videos/12345` where `/video
 
 ## View a video in the Vimeo app
 
-This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:) method. You must provide a video uri to this method. You can find a video's uri by making an API call to our [video endpoints](https://developer.vimeo.com/api/endpoints/videos#/{video_id}).
+You must provide a video uri to this method. You can find a video's uri by making an API call to our [video endpoints](https://developer.vimeo.com/api/endpoints/videos#/{video_id}).
 
 #### Swift
 `let success = VIMDeeplink.showVideo(videoURI: "...")`
@@ -90,7 +96,7 @@ This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/d
 
 ## View a user in the Vimeo app
 
-This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:) method. You must provide a user uri to this method. You can find a user's uri by making an API call to our [user endpoints](https://developer.vimeo.com/api/endpoints/users#/{user_id}).
+You must provide a user uri to this method. You can find a user's uri by making an API call to our [user endpoints](https://developer.vimeo.com/api/endpoints/users#/{user_id}).
 
 #### Swift
 `let success = VIMDeeplink.showUser(userURI: "...")`
@@ -98,9 +104,59 @@ This is a wrapper around the [openURL](https://developer.apple.com/Library/ios/d
 #### Objective C
 `BOOL success = [VIMDeeplink showUserWithURI:@"..."];`
 
-## Open the Camera roll
+## View a category in the Vimeo app
 
-This will be supported in an as yet unreleased version of Vimeo iOS.
+You must provide a category uri to this method. You can find a category's uri by making an API call to our [category endpoints](https://developer.vimeo.com/api/endpoints/categories).
+
+#### Swift
+`let success = VIMDeeplink.showCategory(categoryURI: "...")`
+
+#### Objective C
+`BOOL success = [VIMDeeplink showCategoryWithURI:@"..."];`
+
+## View a channel in the Vimeo app
+
+You must provide a channel uri to this method. You can find a channel's uri by making an API call to our [channel endpoints](https://developer.vimeo.com/api/endpoints/channels).
+
+#### Swift
+`let success = VIMDeeplink.showChannel(userURI: "...")`
+
+#### Objective C
+`BOOL success = [VIMDeeplink showChannelWithURI:@"..."];`
+
+## Open the all categories page
+
+#### Swift
+`let success = VIMDeeplink.showAllCategories()`
+
+#### Objective C
+`BOOL success = [VIMDeeplink showAllCategories];`
+
+## Open the Explore tab
+
+#### Swift
+`let success = VIMDeeplink.showExplore()`
+
+#### Objective C
+`BOOL success = [VIMDeeplink showExplore];`
+
+## Open the Feed tab
+
+#### Swift
+`let success = VIMDeeplink.showFeed()`
+
+#### Objective C
+`BOOL success = [VIMDeeplink showFeed];`
+
+## Open the Playlists tab
+
+#### Swift
+`let success = VIMDeeplink.showPlaylists()`
+
+#### Objective C
+`BOOL success = [VIMDeeplink showPlaylists];`
+
+## Open the Upload from camera roll view
 
 #### Swift
 `let success = VIMDeeplink.showUpload()`
@@ -109,8 +165,6 @@ This will be supported in an as yet unreleased version of Vimeo iOS.
 `BOOL success = [VIMDeeplink showUpload];`
 
 ## Open the current user's profile
-
-This will be supported in an as yet unreleased version of Vimeo iOS.
 
 #### Swift
 `let success = VIMDeeplink.showMyProfile()`
