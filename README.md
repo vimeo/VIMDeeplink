@@ -172,5 +172,24 @@ You must provide a channel uri to this method. You can find a channel's uri by m
 #### Objective C
 `BOOL success = [VIMDeeplink showMyProfile];`
 
+## Found an Issue?
 
+Please file it in the git [issue tracker](https://github.com/vimeo/VIMDeeplink/issues).
 
+## Want to Contribute?
+
+If you'd like to contribute, please follow our guidelines found in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+`VIMDeeplink` is available under the MIT license. See the [LICENSE](LICENSE.md) file for more info.
+
+## Questions?
+
+Tweet at us here: [@vimeoapi](https://twitter.com/vimeoapi).
+
+Post on [Stackoverflow](http://stackoverflow.com/questions/tagged/vimeo-ios) with the tag `vimeo-ios`.
+
+Get in touch [here](https://vimeo.com/help/contact).
+
+Interested in working at Vimeo? We're [hiring](https://vimeo.com/jobs)!
