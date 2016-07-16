@@ -5,21 +5,14 @@ A helper class to deeplink into the official [Vimeo iOS App](https://itunes.appl
 # Contents
  - [Installation](#installation)
  - [Background](#background)
- - [Reference](#reference)
+ - [Examples](#examples)
   - [View Vimeo iOS in the App Store](#view-vimeo-ios-in-the-app-store)
   - [Check if the Vimeo iOS app is installed](#check-if-the-vimeo-ios-app-is-installed)
   - [Open the Vimeo iOS app](#open-the-vimeo-ios-app)
-  - [View a video in the Vimeo app](#view-a-video-in-the-vimeo-app)
-  - [View a user profile in the Vimeo app](#view-a-user-in-the-vimeo-app)
-  - [View a category in the Vimeo app](#view-a-category-in-the-vimeo-app)
-  - [View a channel in the Vimeo app](#view-a-channel-in-the-vimeo-app)
-  - [Open the all categories page](#open-the-all-categories-page)
-  - [Open the Explore tab](#open-the-explore-tab)
-  - [Open the Feed tab](#open-the-feed-tab)
-  - [Open the Playlists tab](#open-the-playlists-tab)
-  - [Open the Camera Roll](#open-the-camera-roll)
-  - [Open the current user's profile](#open-the-current-users-profile)
-
+  - [Open all categories](#open-all-categories)
+  - [Open the video player](#open-the-video-player)
+  - [Open a user profile](#open-a-user-profile)
+ 
 # Installation
 1. [Download this repo](https://github.com/vimeo/VIMDeeplink/archive/master.zip).
 2. Drop the VimeoDeeplink.swift file into your project.
@@ -31,122 +24,37 @@ Deeplinking to a specific piece of Vimeo content (e.g. a channel, category, user
 
 Once you have an object's `uri`, you can pass it to `VimeoDeeplink` and start linking.
 
-# Reference
+# Examples
 
 The Vimeo deeplink base URL is: `vimeo://app.vimeo.com`
 
-## View Vimeo iOS in the App Store
+### View Vimeo iOS in the App Store
 
     let success = VimeoDeeplinkOpener.viewVimeoAppInAppStore()
 
-## View Vimeo iOS in the App Store
+### Check if the Vimeo iOS app is installed
 
-#### Swift
-`let success = VimeoDeeplink`
+    let isInstalled = VimeoDeeplinkOpener.isVimeoAppInstalled()
 
-## Check if the Vimeo app is installed
+### Open the Vimeo iOS app
 
-#### Swift
-`let success = VIMDeeplink.isVimeoAppInstalled()`
+    let success = VimeoDeeplinkOpener.openVimeo()
 
-#### Objective C
-`BOOL success = [VIMDeeplink isVimeoAppInstalled];`
+### Open all categories
 
-## Open the Vimeo app
+    let success = VimeoDeeplinkOpener.openCategories()
 
-#### Swift
-`let success = VIMDeeplink.openVimeoApp()`
+### Open the video player
 
-#### Objective C
-`BOOL success = [VIMDeeplink openVimeoApp];`
+    let uri = "/videos/2" // Where `uri` is obtained from the Vimeo API
+    let success = VimeoDeeplinkOpener.openVideoPlayer(uri: uri)
 
-## View a video in the Vimeo app
+### Open a user profile
 
-You must provide a video uri to this method. You can find a video's uri by making an API call to our [video endpoints](https://developer.vimeo.com/api/endpoints/videos#/{video_id}).
+    let uri = "/users/user123" // Where `uri` is obtained from the Vimeo API
+    let success = VimeoDeeplinkOpener.openUserProfile(uri: uri)
 
-#### Swift
-`let success = VIMDeeplink.showVideo(videoURI: "...")`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showVideoWithURI:@"..."]; // URI obtained via the Vimeo API`
-
-## View a user in the Vimeo app
-
-You must provide a user uri to this method. You can find a user's uri by making an API call to our [user endpoints](https://developer.vimeo.com/api/endpoints/users#/{user_id}).
-
-#### Swift
-`let success = VIMDeeplink.showUser(userURI: "...")`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showUserWithURI:@"..."];`
-
-## View a category in the Vimeo app
-
-You must provide a category uri to this method. You can find a category's uri by making an API call to our [category endpoints](https://developer.vimeo.com/api/endpoints/categories).
-
-#### Swift
-`let success = VIMDeeplink.showCategory(categoryURI: "...")`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showCategoryWithURI:@"..."];`
-
-## View a channel in the Vimeo app
-
-You must provide a channel uri to this method. You can find a channel's uri by making an API call to our [channel endpoints](https://developer.vimeo.com/api/endpoints/channels).
-
-#### Swift
-`let success = VIMDeeplink.showChannel(userURI: "...")`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showChannelWithURI:@"..."];`
-
-## Open the all categories page
-
-#### Swift
-`let success = VIMDeeplink.showAllCategories()`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showAllCategories];`
-
-## Open the Explore tab
-
-#### Swift
-`let success = VIMDeeplink.showExplore()`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showExplore];`
-
-## Open the Feed tab
-
-#### Swift
-`let success = VIMDeeplink.showFeed()`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showFeed];`
-
-## Open the Playlists tab
-
-#### Swift
-`let success = VIMDeeplink.showPlaylists()`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showPlaylists];`
-
-## Open the Upload from camera roll view
-
-#### Swift
-`let success = VIMDeeplink.showUpload()`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showUpload];`
-
-## Open the current user's profile
-
-#### Swift
-`let success = VIMDeeplink.showMyProfile()`
-
-#### Objective C
-`BOOL success = [VIMDeeplink showMyProfile];`
+For an enhaustive list of this library's functionality see the inline documentation and public API of the [VimeoDeeplink class]().
 
 ## Found an Issue?
 
