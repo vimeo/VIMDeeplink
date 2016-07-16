@@ -36,25 +36,34 @@ let success = VimeoDeeplinkOpener.viewVimeoAppInAppStore()
 
 ### Check if the Vimeo iOS app is installed
 
-    let isInstalled = VimeoDeeplinkOpener.isVimeoAppInstalled()
+```Swift
+let isInstalled = VimeoDeeplinkOpener.isVimeoAppInstalled()
+```
 
 ### Open the Vimeo iOS app
 
-    let success = VimeoDeeplinkOpener.openVimeo()
+```Swift
+let success = VimeoDeeplinkOpener.openVimeo()
+```
 
 ### Open all categories
 
-    let success = VimeoDeeplinkOpener.openCategories()
+```Swift
+let success = VimeoDeeplinkOpener.openCategories()
+```
 
 ### Open the video player
 
-    let uri = "/videos/2" // Where `uri` is obtained from the Vimeo API
-    let success = VimeoDeeplinkOpener.openVideoPlayer(uri: uri)
-
+```Swift
+let uri = "/videos/2" // Where `uri` is obtained from the Vimeo API
+let success = VimeoDeeplinkOpener.openVideoPlayer(uri: uri)
+```
 ### Open a user profile
 
-    let uri = "/users/user123" // Where `uri` is obtained from the Vimeo API
-    let success = VimeoDeeplinkOpener.openUserProfile(uri: uri)
+```Swift
+let uri = "/users/user123" // Where `uri` is obtained from the Vimeo API
+let success = VimeoDeeplinkOpener.openUserProfile(uri: uri)
+```
 
 For an enhaustive list of this library's functionality see the inline documentation and public API of the [VimeoDeeplink class](VimeoDeeplink/VimeoDeeplink/VimeoDeeplink.swift).
 
