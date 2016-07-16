@@ -30,7 +30,9 @@ The Vimeo deeplink base URL is: `vimeo://app.vimeo.com`
 
 ### View Vimeo iOS in the App Store
 
-    let success = VimeoDeeplinkOpener.viewVimeoAppInAppStore()
+```Swift
+let success = VimeoDeeplinkOpener.viewVimeoAppInAppStore()
+```
 
 ### Check if the Vimeo iOS app is installed
 
