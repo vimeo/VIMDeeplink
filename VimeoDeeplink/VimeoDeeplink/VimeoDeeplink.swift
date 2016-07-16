@@ -244,7 +244,7 @@ public class VimeoDeeplinkOpener
      
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
-    public static func openVimeoApp() -> Bool
+    public static func openVimeo() -> Bool
     {
         return self.openDeeplink(.App)
     }
