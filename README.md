@@ -1,17 +1,14 @@
 Open With Vimeo
 ==================
-A helper class to view a user profile or video with the official Vimeo iOS App. Supports both [Swift](https://developer.apple.com/swift/) and [Objective C](https://developer.apple.com/library/mac/documentation/cocoa/conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html).
-
+A helper class to deeplink into the official [Vimeo iOS App](https://itunes.apple.com/us/app/vimeo/id425194759?mt=8).
 
 # Contents
  - [Installation](#installation)
- - [Play a video](#play-a-video)
- - [View a user](#view-a-user)
- - [Restrictions](#restrictions)
+ - [Background](#background)
  - [Reference](#reference)
-  - [View app in the App store](#open-app-in-the-app-store)
-  - [Check if the Vimeo app is installed](#check-if-the-vimeo-app-is-installed)
-  - [Open the Vimeo app](#open-the-vimeo-app)
+  - [View Vimeo iOS in the App Store](#view-vimeo-ios-in-the-app-store)
+  - [Check if the Vimeo iOS app is installed](#check-if-the-vimeo-ios-app-is-installed)
+  - [Open the Vimeo iOS app](#open-the-vimeo-ios-app)
   - [View a video in the Vimeo app](#view-a-video-in-the-vimeo-app)
   - [View a user profile in the Vimeo app](#view-a-user-in-the-vimeo-app)
   - [View a category in the Vimeo app](#view-a-category-in-the-vimeo-app)
@@ -25,48 +22,27 @@ A helper class to view a user profile or video with the official Vimeo iOS App. 
 
 # Installation
 1. [Download this repo](https://github.com/vimeo/VIMDeeplink/archive/master.zip).
-2. Drop either the objc .h/.m files or the .swift file into your project.
+2. Drop the VimeoDeeplink.swift file into your project.
 
-# Play a video
+# Background
+In order for deeplinks to work, the user must have the Vimeo iOS app installed on their device. We expose a [method](#check-if-the-vimeo-app-is-installed) to verify this. If the app is not installed, you can send your users to the [app store](#open-app-in-the-app-store). If the app is installed, you can deeplink til your :heart:'s content. 
 
-If you want to play a Vimeo video on iOS, there are currently three choices.
+Deeplinking to a specific piece of Vimeo content (e.g. a channel, category, user, or video object, etc.) requires that you have the object's `uri`. The `uri` is the unique identifier provided by the Vimeo API. You can obtain object `uri`s by making requests to the Vimeo API or by constructing them by hand (although this is not advised). You can learn more at the [developer site](https://developer.vimeo.com/api). The [VimeoNetworking](https://github.com/vimeo/VimeoNetworking) library for iOS facilitates authentication and communication with the Vimeo API.
 
-1. You can open the video in the Vimeo application using this library or by opening `vimeo://app.vimeo.com/{user_uri}` or `vimeo://app.vimeo.com/{video_uri}` links with [openURL](https://developer.apple.com/Library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instm/UIApplication/openURL:).  Note that video and user URIs are of the form `/videos/12345` and `/users/12345` respectively.
-2. You can embed the video in a web view. See our [embed documentation](https://developer.vimeo.com/apis/oembed) for more.
-3. PRO members can generate direct video file links for their own players. See our [API documentation](https://developer.vimeo.com/api) for more.
-
-If you wish to use this library, you must make sure your user has the Vimeo app installed. We expose a [method](#check-if-the-vimeo-app-is-installed) to verify this. If the app is not installed, you can send your users to the [app store](#open-app-in-the-app-store).
-
-If the user has the app installed, you can open the video. First you must find your video's URI. This is the unique identifier provided by the Vimeo API. You can learn more at the [developer site](https://developer.vimeo.com/api). We will release an iOS API library in the future, but for the moment I recommend starting with an OAuth 2 library and working from there.
-
-Once you have your video's URI, you can pass it into the [proper method](#view-a-video-in-the-vimeo-app) and the Vimeo app will open to your video.
-
-# View a user
-
-First you must make sure your user has the Vimeo app installed. We expose a [method](#check-if-the-vimeo-app-is-installed) to verify this. If the app is not installed, you can send your users to the [app store](#open-app-in-the-app-store).
-
-Once the app is installed, find your user's URI. This is the unique identifier provided by the Vimeo API. You can learn more at the [developer site](https://developer.vimeo.com/api). We will release an iOS API library in the future, but for the moment I recommend starting with an OAuth 2 library and working from there.
-
-Once you have your user's URI, you can pass it into the [proper method](#view-a-user-in-the-vimeo-app) and the Vimeo app will open to your user.
-
-# Restrictions
- - The Vimeo app must be installed on your user's device. You can verify this with the [proper method](#check-if-the-vimeo-app-is-installed).
- - Your user must be logged into Vimeo app to view videos.
+Once you have an object's `uri`, you can pass it to `VimeoDeeplink` and start linking.
 
 # Reference
 
 The Vimeo deeplink base URL is: `vimeo://app.vimeo.com`
 
-Currently supported paths are `vimeo://app.vimeo.com/videos/12345` where `/videos/12345` is a video URI and `vimeo://app.vimeo.com/users/12345` where `/users/12345` is a user URI.
+## View Vimeo iOS in the App Store
 
-## Open app in the App store
+    let success = VimeoDeeplinkOpener.viewVimeoAppInAppStore()
+
+## View Vimeo iOS in the App Store
 
 #### Swift
-`let success = VIMDeeplink.viewVimeoAppInAppStore()`
-
-#### Objective C
-`BOOL success = [VIMDeeplink viewVimeoAppInAppStore];`
-
+`let success = VimeoDeeplink`
 
 ## Check if the Vimeo app is installed
 
