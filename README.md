@@ -54,7 +54,7 @@ The Vimeo deeplink base URL is: `vimeo://app.vimeo.com`
     let uri = "/users/user123" // Where `uri` is obtained from the Vimeo API
     let success = VimeoDeeplinkOpener.openUserProfile(uri: uri)
 
-For an enhaustive list of this library's functionality see the inline documentation and public API of the [VimeoDeeplink class](VimeoDeeplink.swift).
+For an enhaustive list of this library's functionality see the inline documentation and public API of the [VimeoDeeplink class](VimeoDeeplink/VimeoDeeplink/VimeoDeeplink.swift).
 
 ## Found an Issue?
 
