@@ -5,6 +5,7 @@ A helper class to deeplink into the official [Vimeo iOS App](https://itunes.appl
 # Contents
  - [Installation](#installation)
  - [Background](#background)
+ - [Swift and Objc](#swift-and-objc)
  - [Examples](#examples)
   - [View Vimeo iOS in the App Store](#view-vimeo-ios-in-the-app-store)
   - [Check if the Vimeo iOS app is installed](#check-if-the-vimeo-ios-app-is-installed)
@@ -12,10 +13,11 @@ A helper class to deeplink into the official [Vimeo iOS App](https://itunes.appl
   - [Open all categories](#open-all-categories)
   - [Open the video player](#open-the-video-player)
   - [Open a user profile](#open-a-user-profile)
+  - [Much more](#much-more)
  
 # Installation
 1. [Download this repo](https://github.com/vimeo/VIMDeeplink/archive/master.zip).
-2. Drop the VimeoDeeplink.swift file into your project.
+2. Drop the VimeoDeeplink.swift (or VIMDeeplink.h/.m) file(s) into your project.
 
 # Background
 In order for deeplinks to work, the user must have the Vimeo iOS app installed on their device. We expose a [method](#check-if-the-vimeo-app-is-installed) to verify this. If the app is not installed, you can send your users to the [app store](#open-app-in-the-app-store). If the app is installed, you can deeplink til your :heart:'s content. 
@@ -23,6 +25,10 @@ In order for deeplinks to work, the user must have the Vimeo iOS app installed o
 Deeplinking to a specific piece of Vimeo content (e.g. a channel, category, user, or video object, etc.) requires that you have the object's `uri`. The `uri` is the unique identifier provided by the Vimeo API. You can obtain object `uri`s by making requests to the Vimeo API or by constructing them by hand (although this is not advised). You can learn more at the [developer site](https://developer.vimeo.com/api). The [VimeoNetworking](https://github.com/vimeo/VimeoNetworking) library for iOS facilitates authentication and communication with the Vimeo API.
 
 Once you have an object's `uri`, you can pass it to `VimeoDeeplink` and start linking.
+
+# Swift and Objc
+
+VimeoDeeplink provides both Swift and Objc APIs. They are almost identical in terms of functionality. There are a few Swift examples below. The full Objc API can be viewed in [VIMDeeplink.h](VimeoDeeplink/VimeoDeeplink/VIMDeeplink.h)/[.m](VimeoDeeplink/VimeoDeeplink/VIMDeeplink.m).
 
 # Examples
 
@@ -65,7 +71,9 @@ let uri = "/users/user123" // Where `uri` is obtained from the Vimeo API
 let success = VimeoDeeplinkOpener.openUserProfile(uri: uri)
 ```
 
-For an enhaustive list of this library's functionality see the inline documentation and public API of the [VimeoDeeplink class](VimeoDeeplink/VimeoDeeplink/VimeoDeeplink.swift).
+### Much more
+
+For an enhaustive list of this library's functionality and the supported deeplinks see the inline documentation and public API of the [VimeoDeeplink class](VimeoDeeplink/VimeoDeeplink/VimeoDeeplink.swift). (Or the [Objc version](VimeoDeeplink/VimeoDeeplink/VimeoDeeplink.h)).
 
 ## Found an Issue?
 
