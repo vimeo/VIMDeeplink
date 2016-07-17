@@ -29,10 +29,10 @@
 @import UIKit;
 
 /// The base url for Vimeo deeplinks.
-NSString *BaseURLString = @"vimeo://app.vimeo.com";
+NSString *VimeoBaseURLString = @"vimeo://app.vimeo.com";
 
 /// The App Store URL to the Vimeo iOS app.
-NSString *AppStoreURLString = @"itms-apps://itunes.apple.com/us/app/id425194759";
+NSString *VimeoAppStoreURLString = @"itms-apps://itunes.apple.com/us/app/id425194759";
 
 static NSString *CategoriesPathComponent = @"categories";
 static NSString *FeedPathComponent = @"feed";
@@ -64,7 +64,7 @@ static NSString *FollowingPathComponent = @"following";
  */
 + (BOOL)viewVimeoAppInAppStore
 {
-    NSURL *URL = [NSURL URLWithString:AppStoreURLString];
+    NSURL *URL = [NSURL URLWithString:VimeoAppStoreURLString];
     
     return [[UIApplication sharedApplication] openURL:URL];
 }
@@ -76,7 +76,7 @@ static NSString *FollowingPathComponent = @"following";
  */
 + (BOOL)isVimeoAppInstalled
 {
-    NSURL *URL = [NSURL URLWithString:BaseURLString];
+    NSURL *URL = [NSURL URLWithString:VimeoBaseURLString];
     
     return [[UIApplication sharedApplication] canOpenURL:URL];
 }
@@ -88,7 +88,7 @@ static NSString *FollowingPathComponent = @"following";
  */
 + (BOOL)openVimeo
 {
-    NSURL *URL = [NSURL URLWithString:BaseURLString];
+    NSURL *URL = [NSURL URLWithString:VimeoBaseURLString];
     
     return [[UIApplication sharedApplication] openURL:URL];
 }
@@ -356,26 +356,43 @@ static NSString *FollowingPathComponent = @"following";
 {
     NSAssert([NSThread isMainThread], @"Attempt to open a deeplink from a thread other than the main thread.");
     
-    NSParameterAssert(pathComponent);
-    
-    if ([pathComponent length] == 0 || [VIMDeeplink isVimeoAppInstalled] == false)
+    if ([VIMDeeplink isVimeoAppInstalled] == false)
     {
         return false;
     }
 
-    NSURL *URL = [NSURL URLWithString:BaseURLString];
-    URL = [URL URLByAppendingPathComponent:pathComponent];
+    NSURL *URL = [self deeplinkWithPathComponents:pathComponent];
+    
+    return [[UIApplication sharedApplication] openURL:URL];
+}
+
++ (NSURL *_Nullable)deeplinkWithPathComponents:(NSString * _Nonnull)pathComponent, ...
+{
+    NSParameterAssert(pathComponent);
+    
+    if ([pathComponent length] == 0)
+    {
+        return nil;
+    }
+    
+    NSURL *url = [NSURL URLWithString:VimeoBaseURLString];
+    url = [url URLByAppendingPathComponent:pathComponent];
     
     id eachComponent;
     va_list argumentList;
     va_start(argumentList, pathComponent);
     while ((eachComponent = va_arg(argumentList, NSString *)))
     {
-        URL = [URL URLByAppendingPathComponent:pathComponent];
+        if ([eachComponent length] == 0)
+        {
+            continue;
+        }
+
+        url = [url URLByAppendingPathComponent:eachComponent];
     }
     va_end(argumentList);
     
-    return [[UIApplication sharedApplication] openURL:URL];
+    return url;
 }
 
 @end

@@ -26,9 +26,9 @@
 
 @import Foundation;
 
-extern NSString * _Nonnull BaseURLString;
+extern NSString * _Nonnull VimeoBaseURLString;
 
-extern NSString * _Nonnull AppStoreURLString;
+extern NSString * _Nonnull VimeoAppStoreURLString;
 
 @interface VIMDeeplink: NSObject
 
