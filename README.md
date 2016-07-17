@@ -13,6 +13,7 @@ A helper class to deeplink into the official [Vimeo iOS App](https://itunes.appl
   - [Open all categories](#open-all-categories)
   - [Open the video player](#open-the-video-player)
   - [Open a user profile](#open-a-user-profile)
+  - [Much more](#much-more)
  
 # Installation
 1. [Download this repo](https://github.com/vimeo/VIMDeeplink/archive/master.zip).
@@ -70,7 +71,9 @@ let uri = "/users/user123" // Where `uri` is obtained from the Vimeo API
 let success = VimeoDeeplinkOpener.openUserProfile(uri: uri)
 ```
 
-For an enhaustive list of this library's functionality see the inline documentation and public API of the [VimeoDeeplink class](VimeoDeeplink/VimeoDeeplink/VimeoDeeplink.swift).
+### Much more
+
+For an enhaustive list of this library's functionality and the supported deeplinks see the inline documentation and public API of the [VimeoDeeplink class](VimeoDeeplink/VimeoDeeplink/VimeoDeeplink.swift). (Or the [Objc version](VimeoDeeplink/VimeoDeeplink/VimeoDeeplink.h)).
 
 ## Found an Issue?
 
