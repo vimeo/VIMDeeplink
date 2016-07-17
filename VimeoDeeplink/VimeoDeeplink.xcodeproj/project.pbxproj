@@ -15,6 +15,7 @@
 		AF1513061D39A2BF007705D5 /* VimeoDeeplinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1513051D39A2BF007705D5 /* VimeoDeeplinkTests.swift */; };
 		AF1513111D39A2BF007705D5 /* VimeoDeeplinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1513101D39A2BF007705D5 /* VimeoDeeplinkUITests.swift */; };
 		AF15131F1D39A302007705D5 /* VimeoDeeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF15131E1D39A302007705D5 /* VimeoDeeplink.swift */; };
+		AF1513231D3BCBDD007705D5 /* VIMDeeplink.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1513221D3BCBDD007705D5 /* VIMDeeplink.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		AF1513101D39A2BF007705D5 /* VimeoDeeplinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoDeeplinkUITests.swift; sourceTree = "<group>"; };
 		AF1513121D39A2C0007705D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF15131E1D39A302007705D5 /* VimeoDeeplink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimeoDeeplink.swift; sourceTree = "<group>"; };
+		AF1513201D3BCBDC007705D5 /* VimeoDeeplink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VimeoDeeplink-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF1513211D3BCBDD007705D5 /* VIMDeeplink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VIMDeeplink.h; sourceTree = "<group>"; };
+		AF1513221D3BCBDD007705D5 /* VIMDeeplink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VIMDeeplink.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,13 @@
 				AF1512F01D39A2BF007705D5 /* AppDelegate.swift */,
 				AF1512F21D39A2BF007705D5 /* ViewController.swift */,
 				AF15131E1D39A302007705D5 /* VimeoDeeplink.swift */,
+				AF1513211D3BCBDD007705D5 /* VIMDeeplink.h */,
+				AF1513221D3BCBDD007705D5 /* VIMDeeplink.m */,
 				AF1512F41D39A2BF007705D5 /* Main.storyboard */,
 				AF1512F71D39A2BF007705D5 /* Assets.xcassets */,
 				AF1512F91D39A2BF007705D5 /* LaunchScreen.storyboard */,
 				AF1512FC1D39A2BF007705D5 /* Info.plist */,
+				AF1513201D3BCBDC007705D5 /* VimeoDeeplink-Bridging-Header.h */,
 			);
 			path = VimeoDeeplink;
 			sourceTree = "<group>";
@@ -259,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1513231D3BCBDD007705D5 /* VIMDeeplink.m in Sources */,
 				AF1512F31D39A2BF007705D5 /* ViewController.swift in Sources */,
 				AF1512F11D39A2BF007705D5 /* AppDelegate.swift in Sources */,
 				AF15131F1D39A302007705D5 /* VimeoDeeplink.swift in Sources */,
@@ -403,10 +411,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VimeoDeeplink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vimeo.VimeoDeeplink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VimeoDeeplink/VimeoDeeplink-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -414,10 +425,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = VimeoDeeplink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vimeo.VimeoDeeplink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VimeoDeeplink/VimeoDeeplink-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -260,8 +260,10 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "individual category view" for the category with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "individual category view" for the category with `uri` via a deeplink.
      
+     - parameter uri: The category `uri` obtained from the Vimeo API.
+
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
     public static func openCategory(uri uri: String) -> Bool
@@ -272,8 +274,10 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "individual channel view" for the channel with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "individual channel view" for the channel with `uri` via a deeplink.
      
+     - parameter uri: The channel `uri` obtained from the Vimeo API.
+
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
     public static func openChannel(uri uri: String) -> Bool
@@ -404,8 +408,10 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "video player view" via a deeplink.
+     Attempts to open the Vimeo iOS app "video player view" via a deeplink for the video with `uri` via a deeplink.
      
+     - parameter uri: The video `uri` obtained from the Vimeo API.
+
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
     public static func openVideoPlayer(uri uri: String) -> Bool
@@ -416,8 +422,10 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "video player view" and "up next tab" for the video with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "video player view" and "up next tab" for the video with `uri` via a deeplink.
      
+     - parameter uri: The video `uri` obtained from the Vimeo API.
+
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
     public static func openVideoPlayerUpNextTab(uri uri: String) -> Bool
@@ -428,7 +436,9 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "video player view" and "comments tab" for the video with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "video player view" and "comments tab" for the video with `uri` via a deeplink.
+
+     - parameter uri: The video `uri` obtained from the Vimeo API.
 
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
@@ -440,7 +450,9 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "video player view" and "likes tab" for the video with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "video player view" and "likes tab" for the video with `uri` via a deeplink.
+     
+     - parameter uri: The video `uri` obtained from the Vimeo API.
      
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
@@ -452,7 +464,9 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "user profile view" for the user with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "user profile view" for the user with `uri` via a deeplink. 
+     
+     - parameter uri: The user `uri` obtained from the Vimeo API.
      
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
@@ -464,7 +478,9 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "user profile view" and "followers tab" for the user with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "user profile view" and "followers tab" for the user with `uri` via a deeplink.
+     
+     - parameter uri: The user `uri` obtained from the Vimeo API.
      
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
@@ -476,7 +492,9 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "user profile view" and "following tab" for the user with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "user profile view" and "following tab" for the user with `uri` via a deeplink. 
+     
+     - parameter uri: The user `uri` obtained from the Vimeo API.
      
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
@@ -488,7 +506,9 @@ public class VimeoDeeplinkOpener
     }
 
     /**
-     Attempts to open the Vimeo iOS app "user profile view" and "likes tab" for the user with `uri` via a deeplink. Where the `uri` is obtained from the Vimeo API.
+     Attempts to open the Vimeo iOS app "user profile view" and "likes tab" for the user with `uri` via a deeplink.
+     
+     - parameter uri: The user `uri` obtained from the Vimeo API.
      
      - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
      */
