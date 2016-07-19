@@ -10,7 +10,7 @@ A helper class to deeplink into the official [Vimeo iOS App](https://itunes.appl
   - [View Vimeo iOS in the App Store](#view-vimeo-ios-in-the-app-store)
   - [Check if the Vimeo iOS app is installed](#check-if-the-vimeo-ios-app-is-installed)
   - [Open the Vimeo iOS app](#open-the-vimeo-ios-app)
-  - [Open all categories](#open-all-categories)
+  - [Open the "all categories" view](#open-the-all-categories-view)
   - [Open the video player](#open-the-video-player)
   - [Open a user profile](#open-a-user-profile)
   - [Much more](#much-more)
@@ -28,7 +28,7 @@ Once you have an object's `uri`, you can pass it to `VimeoDeeplink` and start li
 
 # Swift and Objc
 
-VimeoDeeplink provides both Swift and Objc APIs. They are almost identical in terms of functionality. There are a few Swift examples below. The full Objc API can be viewed in [VIMDeeplink.h](VimeoDeeplink/VimeoDeeplink/VIMDeeplink.h)/[.m](VimeoDeeplink/VimeoDeeplink/VIMDeeplink.m).
+VimeoDeeplink provides both Swift and Objc APIs. They are almost identical in terms of functionality. There are a few Swift examples below. The full Objc API can be viewed in [VIMDeeplink.h](VimeoDeeplink/VimeoDeeplink/VIMDeeplink.h)/[VIMDeeplink.m](VimeoDeeplink/VimeoDeeplink/VIMDeeplink.m).
 
 # Examples
 
@@ -52,7 +52,7 @@ let isInstalled = VimeoDeeplinkOpener.isVimeoAppInstalled()
 let success = VimeoDeeplinkOpener.openVimeo()
 ```
 
-### Open all categories
+### Open the "All Categories" view
 
 ```Swift
 let success = VimeoDeeplinkOpener.openCategories()
@@ -61,13 +61,13 @@ let success = VimeoDeeplinkOpener.openCategories()
 ### Open the video player
 
 ```Swift
-let uri = "/videos/2" // Where `uri` is obtained from the Vimeo API
+let uri = "/videos/149058362" // Where `uri` is obtained from the Vimeo API
 let success = VimeoDeeplinkOpener.openVideoPlayer(uri: uri)
 ```
 ### Open a user profile
 
 ```Swift
-let uri = "/users/user123" // Where `uri` is obtained from the Vimeo API
+let uri = "/users/staff" // Where `uri` is obtained from the Vimeo API
 let success = VimeoDeeplinkOpener.openUserProfile(uri: uri)
 ```
 
