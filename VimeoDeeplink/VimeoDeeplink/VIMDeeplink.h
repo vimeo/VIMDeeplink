@@ -46,6 +46,7 @@ extern NSString * _Nonnull VimeoAppStoreURLString;
 + (BOOL)openOffline;
 + (BOOL)openPurchases;
 + (BOOL)openWatchLater;
++ (BOOL)openOnDemandContainer:(NSString * _Nonnull)uri;
 + (BOOL)openSearch;
 + (BOOL)openSearchVideos;
 + (BOOL)openSearchChannels;

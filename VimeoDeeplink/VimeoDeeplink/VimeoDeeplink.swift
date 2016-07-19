@@ -68,6 +68,9 @@ public enum VimeoDeeplink
     /// Open the app and display the authenticated user's watch later view.
     case WatchLater
 
+    /// Open the app and display the view for a Vimeo On Demand "container".
+    case OnDemandContainer(uri: String)
+
     /// Open the app and display the general search view.
     case Search
 
@@ -163,7 +166,10 @@ public extension VimeoDeeplink
             
         case WatchLater:
             return self.dynamicType.BaseUrl.URLByAppendingPathComponent("watchlater")
-            
+
+        case .OnDemandContainer(uri: let uri):
+            return self.dynamicType.BaseUrl.URLByAppendingPathComponent(uri)
+
         case Search:
             return self.dynamicType.BaseUrl.URLByAppendingPathComponent("search")
             
@@ -366,7 +372,19 @@ public class VimeoDeeplinkOpener
     {
         return self.openDeeplink(.WatchLater)
     }
-    
+
+    /**
+     Attempts to open the Vimeo iOS app "on demand container view" via a deeplink.
+     
+     - returns: A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
+     */
+    public static func OnDemandContainer(uri uri: String) -> Bool
+    {
+        let deeplink = VimeoDeeplink.OnDemandContainer(uri: uri)
+        
+        return self.openDeeplink(deeplink)
+    }
+
     /**
      Attempts to open the Vimeo iOS app "search view" via a deeplink.
      

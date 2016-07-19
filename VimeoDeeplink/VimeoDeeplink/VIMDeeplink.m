@@ -208,6 +208,18 @@ static NSString *FollowingPathComponent = @"following";
 }
 
 /*!
+ @brief Attempts to open the Vimeo iOS app "on demand container view" for the on demand item with `uri` via a deeplink.
+ 
+ @param uri The on demand container `uri` obtained from the Vimeo API.
+ 
+ @return BOOL A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.
+ */
++ (BOOL)openOnDemandContainer:(NSString * _Nonnull)uri
+{
+    return [self openDeeplinkWithPathComponents:uri];
+}
+
+/*!
  @brief Attempts to open the Vimeo iOS app "search view" via a deeplink.
  
  @return BOOL A boolean indicating whether the Vimeo iOS app could be opened with this deeplink.

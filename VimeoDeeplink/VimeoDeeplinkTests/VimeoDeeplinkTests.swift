@@ -140,6 +140,14 @@ class VimeoDeeplinkTests: XCTestCase
         XCTAssert(deeplink.URL.absoluteString == string, "Deeplink is expected to be \(string)")
     }
 
+    func testDeeplinkOnDemandContainer()
+    {
+        let deeplink = VimeoDeeplink.OnDemandContainer(uri: self.uri)
+        let string = "\(self.baseURLString)/\(self.uri)"
+        
+        XCTAssert(deeplink.URL.absoluteString == string, "Deeplink is expected to be \(string)")
+    }
+
     func testDeeplinkSearch()
     {
         let deeplink = VimeoDeeplink.Search
