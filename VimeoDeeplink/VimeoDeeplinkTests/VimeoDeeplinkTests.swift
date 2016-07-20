@@ -42,7 +42,7 @@ class VimeoDeeplinkTests: XCTestCase
     {
         let string = "itms-apps://itunes.apple.com/us/app/id425194759"
         
-        XCTAssert(VimeoDeeplinkOpener.AppStoreUrl.absoluteString == string, "Base URL is expected to be \(string)")
+        XCTAssert(VimeoDeeplinkOpener.AppStoreURL.absoluteString == string, "Base URL is expected to be \(string)")
     }
     
     func testDeeplinkApp()

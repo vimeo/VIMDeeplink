@@ -569,7 +569,7 @@ public extension VimeoDeeplinkOpener
     private static let AppStorePath = "/us/app/id425194759"
     
     /// The App Store URL to the Vimeo iOS app.
-    public static var AppStoreUrl: NSURL
+    public static var AppStoreURL: NSURL
     {
         let components = NSURLComponents()
         components.scheme = self.AppStoreScheme
@@ -586,7 +586,7 @@ public extension VimeoDeeplinkOpener
      */
     public static func viewVimeoAppInAppStore() -> Bool
     {
-        let url = self.AppStoreUrl
+        let url = self.AppStoreURL
         
         return UIApplication.sharedApplication().openURL(url)
     }
