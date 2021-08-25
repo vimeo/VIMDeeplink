@@ -1,3 +1,5 @@
+⚠️⚠️⚠️ This library has been deprecated and will be removed in the future. ⚠️⚠️⚠️
+
 Open With Vimeo
 ==================
 A helper class to deeplink into the official [Vimeo iOS App](https://itunes.apple.com/us/app/vimeo/id425194759?mt=8).
